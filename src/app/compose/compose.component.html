@@ -1,0 +1,26 @@
+<div class="flex-container compose-mail">
+	<form class="flex-container flex-column flex-align-center" [formGroup] = "mailForm" novalidate>
+		<div class="flex-container ">
+			<input type="text" name="" class="mailFields" id="mailTo" placeholder="To" formControlName="toName">
+			<!-- <span> Cc</span>
+			<span> Bcc</span> -->
+		</div>
+		
+		<div class="flex-container">
+			<input type="text" name="" class="mailFields" id="mailSubject" placeholder="Subject" formControlName="subject">
+		</div>
+		<div>
+			<textarea class="mailFields" id="mailBody" formControlName="body"></textarea>
+		</div>
+		<div class="flex-container flex-justify-space-between">
+			<div>
+				<button type="submit" class="btn btn-primary" (click)="handleSubmit()"> Send </button>
+				<button class="btn btn-primary" (click)="handleDraft()"> Save Draft</button>
+			</div>
+			<span class="glyphicon glyphicon-trash trash" (click)= "deleteFormValues()"></span>
+		</div>
+	</form>
+</div>
+
+
+

@@ -1,0 +1,36 @@
+<div class="flex-container flex-column">
+	<div class="flex-container actions">
+		<div class="flex-container">
+			<span class="btn btn-alt glyphicon glyphicon-trash" (click)= "handleDelete()" ></span>
+		</div>
+		<div class="flex-container">
+			<span class="btn btn-alt glyphicon glyphicon-star-empty" (click)= "handleFavorite()"></span>
+		</div>
+	</div>
+	<div class="flex-container table-wrapper">
+		<table class="table flex-container flex-column">
+			<thead class="flex-container flex-column">
+			    <tr class="flex-container">
+			    	<td class="flex-container checkbox"> <input type="checkbox" name="" (click)= "handleSelectAll($event.target.checked)" [(ngModel)]="isSelectAllChecked">Select All </td>
+			      	<td class="flex-container fromName"> From </td>
+			      	<td class="flex-container toName"> To </td>
+			     	<td class="flex-container subject"> Subject </td>
+			     	<td class="flex-container body"> Body </td>
+			     	<td class="flex-container date"> Date </td>
+			     	
+			    </tr>
+			</thead>
+			<tbody class="flex-container flex-column">
+			  	<tr class="flex-container" *ngFor = "let mail of mailsArray | search : searchText :'fromName,toName,subject,body' " (click)= "handleRowClick($event,mail)">
+			    	<td class="flex-container checkbox"> <input type="checkbox" name="" [(ngModel)]="mail.isSelected" (click)= "handleCheckBox(mail,$event.target.checked)"></td>
+			      	<td class="flex-container fromName"> {{mail.fromName}}</td>
+			      	<td class="flex-container toName"> {{mail.toName}}</td>
+			      	<td class="flex-container subject"> {{mail.subject}}</td>
+			      	<td class="flex-container body"> {{mail.body}}</td>
+			      	<td class="flex-container date"> {{mail.sentDate}}</td>
+			    </tr>
+			</tbody>
+		</table>	
+	</div>
+	
+</div>

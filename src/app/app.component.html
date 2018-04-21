@@ -1,0 +1,30 @@
+<div class="app-container flex-container flex-column width-100-per height-100-per">
+	<h2 id="title"> Email </h2>
+	<div class="flex-container flex-column flex-grow-1">
+		<div class="input-group flex-container">
+	  		<input type="text" class="form-control" placeholder="Search" (input) = "handleSearch($event)" aria-describedby="search">
+	  		<span class="input-group-addon glyphicon glyphicon-search flex-justify-center"></span>
+		</div>
+		
+		<div class="flex-container flex-row flex-grow-1">
+			<div class="flex-container flex-column side-nav">
+				<div class="flex-container">
+					<button class="btn btn-alt" routerLink = "/compose">Compose </button>
+				</div>
+				<div class="flex-container flex-column sub-nav">
+					<div class="flex-container" routerLink = "/inbox"> Inbox </div>
+					<div class="flex-container" routerLink = "/sentMail"> Sent Item </div>
+					<div class="flex-container" routerLink = "/draft"> Draft</div>
+					<div class="flex-container" routerLink = "/trash"> Trash </div>
+					<div class="flex-container" routerLink = "/favorites"> Favorites </div>
+					<div class="flex-container" [routerLink]="[{ outlets: { popup: ['chat'] } }]"> Chat </div>
+				</div>
+			</div>			
+			<div class="mail-list flex-container">
+				<router-outlet></router-outlet>
+				<router-outlet name="popup"></router-outlet>
+			</div>
+		</div> 
+	
+	</div>
+</div>

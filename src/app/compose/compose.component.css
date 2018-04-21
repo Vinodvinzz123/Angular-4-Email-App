@@ -1,0 +1,47 @@
+.flex-container{
+	display: flex;
+}
+
+.flex-justify-center{
+	justify-content: center;
+}
+
+.flex-column{
+	flex-direction: column;
+}
+
+.flex-row{
+	flex-direction: row;
+}
+
+.flex-justify-space-between{
+	justify-content: space-between;
+}
+
+.flex-align-center{
+	align-items: center;
+}
+
+.compose-mail{
+	width: 500px;
+	height: 300px;
+	border:1px solid;
+}
+
+.mailFields{
+	border:none;
+	border-bottom: 1px solid;
+	width: 100%;
+}
+
+textarea{
+	height:200px;
+}
+
+form,form div{
+	width:100%;
+}
+
+.btn, .trash{
+	margin:5px;
+}

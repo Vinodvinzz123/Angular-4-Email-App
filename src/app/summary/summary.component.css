@@ -1,0 +1,57 @@
+:host{
+ width: 100%
+}
+
+table{
+	border: 1px solid;
+	table-layout: fixed;
+	white-space: nowrap;
+}
+
+thead{
+	font-weight: bold;
+}
+
+tbody{
+	overflow: auto;
+}
+
+tr td{
+	padding:15px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+tbody tr td{
+	cursor: pointer;
+}
+
+.checkbox{
+	width:8%;
+	margin:0px;
+}
+
+.checkbox input{
+	margin-left: -10px;
+}
+
+.toName{
+	width:10%;
+}
+
+.fromName{
+	width:10%
+}
+
+.subject{
+	width:22%
+}
+
+.body{
+	width:30%
+}
+
+.date{
+	width:20%
+}

@@ -1,0 +1,31 @@
+#title{
+	margin: 20px;
+}
+
+.input-group{
+	width: 300px;
+	margin: 20px;
+}
+
+.side-nav{
+	border: 1px solid black;
+	margin: 20px;
+	padding: 10px;
+	color: grey;
+}
+
+.sub-nav div:hover{
+	cursor: pointer;
+	color: red;
+}
+
+.sub-nav{
+	height:100%;
+	justify-content: space-around;
+	padding: 10px;
+}
+
+.mail-list{
+	margin:20px;
+	flex-grow: 4;
+}
